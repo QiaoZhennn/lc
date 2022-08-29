@@ -1,4 +1,4 @@
-import urllib
+from urllib.request import Request, urlopen
 import json
 import datetime
 
@@ -8,8 +8,8 @@ def open_url(username, limit):
     url = base.format(username=username, limit=limit)
     head = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'}
-    req = urllib.request.Request(url, headers=head)
-    response = urllib.request.urlopen(req)
+    req = Request(url, headers=head)
+    response = urlopen(req)
     html = response.read()
     html_str = html.decode('utf-8')
     return html_str
