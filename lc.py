@@ -66,7 +66,8 @@ def print_result(username, ac_problems):
 
 name_dict = {'QiaoZhennn': 'Zhen',
              'RachelLiu66': 'Rachel',
-             'SeSmC06': 'Peng'}
+             'SeSmC06': 'Peng',
+             'ychen01': 'Yian'}
 limit = 15
 
 if __name__ == '__main__':
