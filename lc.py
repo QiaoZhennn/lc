@@ -14,16 +14,19 @@ def open_url(username, limit):
     html_str = html.decode('utf-8')
     return html_str
 
+
 def get_prev_week_date():
     today = datetime.date.today()
     prev_monday = today - datetime.timedelta(days=today.weekday(), weeks=1)
     prev_sunday = prev_monday + datetime.timedelta(days=6)
     return (prev_monday, prev_sunday)
 
+
 def is_submited_in_prev_week(ts):
     dates = get_prev_week_date()
     ts_date = datetime.datetime.fromtimestamp(int(ts)).date()
     return dates[0] <= ts_date <= dates[1]
+
 
 def gen_submission_list(html_str):
     obj = json.loads(html_str)
@@ -50,7 +53,7 @@ def print_result(username, ac_problems):
     ac_limit = 10
     unit_price = 10
     usd2rmb = 7
-    res = username + '\tPrev week AC: ' + str(prev_ac_count)
+    res = username + '\tTotal AC: ' + str(prev_ac_count)
     if prev_ac_count < ac_limit:
         rmb = unit_price * (ac_limit - prev_ac_count)
         res += '  \tPenalty: ¥' + \
@@ -58,8 +61,10 @@ def print_result(username, ac_problems):
     print(res)
 
 
-name_dict = {'QiaoZhennn': 'Zhen',
+name_dict = {'xtdong1001': 'Xingt',
+             'QiaoZhennn': 'Zhen',
              'pinisthn': 'Nicole',
+             'haomiaovast': 'Emma',
              'RachelLiu66': 'Rachel',
              'SeSmC06': 'Peng',
              'ychen01': 'Yian'}
