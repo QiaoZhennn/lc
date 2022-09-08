@@ -16,7 +16,7 @@ def open_url(username, limit):
 
 
 def get_prev_week_date():
-    today = datetime.date.today()
+    today = datetime.date.today() + datetime.timedelta(days=0)
     prev_monday = today - datetime.timedelta(days=today.weekday(), weeks=1)
     prev_sunday = prev_monday + datetime.timedelta(days=6)
     return (prev_monday, prev_sunday)
@@ -67,7 +67,8 @@ name_dict = {'xtdong1001': 'Xingt',
              'haomiaovast': 'Emma',
              'RachelLiu66': 'Rachel',
              'SeSmC06': 'Peng',
-             'ychen01': 'Yian'}
+             'ychen01': 'Yian',
+             'wchoi32': 'John'}
 limit = 20
 
 if __name__ == '__main__':
