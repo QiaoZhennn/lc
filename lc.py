@@ -16,7 +16,7 @@ def open_url(username, limit):
 
 
 def get_prev_week_date():
-    today = datetime.date.today() + datetime.timedelta(days=0)
+    today = datetime.date.today() + datetime.timedelta(days=2)
     prev_monday = today - datetime.timedelta(days=today.weekday(), weeks=1)
     prev_sunday = prev_monday + datetime.timedelta(days=6)
     return (prev_monday, prev_sunday)
@@ -50,7 +50,7 @@ def print_result(username, ac_problems):
         res = username + '\tInvalid'
         print(res)
         return
-    ac_limit = 10
+    ac_limit = 5
     unit_price = 10
     usd2rmb = 7
     res = username + '\tTotal AC: ' + str(prev_ac_count)
@@ -65,7 +65,6 @@ name_dict = {'xtdong1001': 'Xingt',
              'QiaoZhennn': 'Zhen',
              'pinisthn': 'Nicole',
              'haomiaovast': 'Emma',
-             'RachelLiu66': 'Rachel',
              'SeSmC06': 'Peng',
              'ychen01': 'Yian',
              'wchoi32': 'John'}
