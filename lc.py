@@ -64,7 +64,7 @@ def print_result(username, ac_problems):
 name_dict = {'QiaoZhennn': 'Zhen',
              #'xtdong1001': 'Xingt',
              #'pinisthn': 'Nicole',
-             'haomiaovast': 'Emma',
+             #'haomiaovast': 'Emma',
              'SeSmC06': 'Peng',
              'RachelLiu66': 'Rachel',
              'ychen01': 'Yian',
