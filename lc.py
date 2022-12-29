@@ -61,11 +61,12 @@ def print_result(username, ac_problems):
     print(res)
 
 
-name_dict = {'xtdong1001': 'Xingt',
-             'QiaoZhennn': 'Zhen',
-             'pinisthn': 'Nicole',
+name_dict = {'QiaoZhennn': 'Zhen',
+             #'xtdong1001': 'Xingt',
+             #'pinisthn': 'Nicole',
              'haomiaovast': 'Emma',
              'SeSmC06': 'Peng',
+             'RachelLiu66': 'Rachel',
              'ychen01': 'Yian',
              'wchoi32': 'John'}
 limit = 20
