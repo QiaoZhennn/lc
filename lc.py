@@ -51,13 +51,12 @@ def print_result(username, ac_problems):
         print(res)
         return
     ac_limit = 5
-    unit_price = 10
+    unit_price = 2
     usd2rmb = 7
     res = username + '\tTotal AC: ' + str(prev_ac_count)
     if prev_ac_count < ac_limit:
-        rmb = unit_price * (ac_limit - prev_ac_count)
-        res += '  \tPenalty: ¥' + \
-            str(rmb) + '($' + '{:.2f}'.format(rmb / usd2rmb) + ')'
+        penality = unit_price * (ac_limit - prev_ac_count)
+        res += '  \tPenalty: $' + str(penality)
     print(res)
 
 
@@ -66,9 +65,11 @@ name_dict = {'QiaoZhennn': 'Zhen',
              #'pinisthn': 'Nicole',
              #'haomiaovast': 'Emma',
              'SeSmC06': 'Peng',
-             'RachelLiu66': 'Rachel',
-             'ychen01': 'Yian',
-             'wchoi32': 'John'}
+             'danqingwang': "Danqing",
+            #  'RachelLiu66': 'Rachel',
+            #  'ychen01': 'Yian',
+            #  'wchoi32': 'John'
+            }
 limit = 20
 
 if __name__ == '__main__':
